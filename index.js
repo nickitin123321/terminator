@@ -5,8 +5,8 @@ const BASH_NAMESPACE =`\n#!/bin/bash\n`;
 export default class Terminator {
   /**
    * @param {string[]} [commands]
-   * @param {string} [dir]
-   * @param {string[]} []
+   * @param {string[]} [onSshCommands]
+   * @param {{endProcessWrite: boolean}} [options]
    */
   constructor(commands, onSshCommands, options = {}){
     this.command = commands.join(' && ')
@@ -15,9 +15,6 @@ export default class Terminator {
     this.process = null
   }
 
-  /**
-   * @param {string[]} [commands]
-   */
   exec(){
     this.process = exec(this.command , (err, out, stderr) => {
       console.log(err ?? out ?? stderr)
