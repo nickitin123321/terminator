@@ -10,7 +10,7 @@ export default class Terminator {
    */
   constructor(commands, onSshCommands, options = {}){
     this.command = commands.join(' && ')
-    this.remoteCommand = BASH_NAMESPACE + onSshCommands.join(' && ')
+    this.remoteCommand = onSshCommands ? BASH_NAMESPACE + onSshCommands.join(' && ') : ''
     this.endProcessWrite = options.endProcessWrite ?? true
     this.process = null
   }
