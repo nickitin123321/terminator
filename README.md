@@ -1,0 +1,3 @@
+- Pesets of commands in JS
+- Remote ssh commands piplenes
+- BASH, git, pm2, etc commands in JS with types and comments
