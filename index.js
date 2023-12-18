@@ -8,7 +8,7 @@ export default class Terminator {
    * @param {string} [dir]
    * @param {string[]} []
    */
-  constructor(commands, onSshCommands, options){
+  constructor(commands, onSshCommands, options = {}){
     this.command = commands.join(' && ')
     this.remoteCommand = BASH_NAMESPACE + onSshCommands.join(' && ')
     this.endProcessWrite = options.endProcessWrite ?? true
