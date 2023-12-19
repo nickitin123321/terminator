@@ -1,6 +1,6 @@
 - Pesets of commands in JS
 - Remote ssh commands pipelines
-- BASH, git, pm2, docker, etc commands in JS with types and comments
+- BASH, git, pm2, docker, etc commands in JS
 
 Usage/exaples:
 ``` js
