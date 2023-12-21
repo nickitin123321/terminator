@@ -4,7 +4,7 @@ const BASH_NAMESPACE =`\n#!/bin/bash\n`;
 
 export default class Terminator {
   /**
-   * @param {string[]} [commands]
+   * @param {string[]} commands
    * @param {string[]} [onSshCommands]
    * @param {{endProcessWrite: boolean}} [options]
    */
@@ -34,9 +34,9 @@ export default class Terminator {
         process.stdin.write(this.remoteCommand + '\n', (err) => {
           err && console.error(err)
         })
-        console.log(data)
         this.endProcessWrite && process.stdin.end();
       }
+      console.log(data)
     });
     process.on('close', (code) => {
       console.log(`child process exited with code ${code}`);

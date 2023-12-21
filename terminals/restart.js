@@ -1,5 +1,6 @@
 import commands from '../commands/index.js'
-const { connectSsh, update } = commands
+import bots from './bots.schema.js'
+const { connectSsh, restartFn } = commands
 import Terminator from '../index.js'
 
-(new Terminator(connectSsh, update)).exec()
+(new Terminator(connectSsh, restartFn(bots.audio))).exec()

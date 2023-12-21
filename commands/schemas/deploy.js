@@ -10,11 +10,9 @@ const NAME = '[NAME]'
 
 export default [
   cd('niki'),
-  //clone(`https://github.com/nickitin123321/${NAME}`),
+  clone(`https://github.com/nickitin123321/${NAME}`),
   cd(`${NAME}/src`),
-  //'npm i',
-
+  'npm i',
   write('.env', `[SECRET]`),
-
   start('index.js', NAME)
 ]
